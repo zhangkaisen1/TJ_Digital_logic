@@ -1,0 +1,411 @@
+
+*** Running vivado
+    with args -log digital_clock.vds -m64 -mode batch -messageDb vivado.pb -notrace -source digital_clock.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source digital_clock.tcl -notrace
+Command: synth_design -top digital_clock -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5736 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 305.469 ; gain = 98.906
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'digital_clock' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:26]
+INFO: [Synth 8-638] synthesizing module 'frequency_divider' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:147]
+INFO: [Synth 8-256] done synthesizing module 'frequency_divider' (1#1) [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:147]
+INFO: [Synth 8-638] synthesizing module 'time_count' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:215]
+INFO: [Synth 8-256] done synthesizing module 'time_count' (2#1) [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:215]
+WARNING: [Synth 8-567] referenced signal 'sh' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:77]
+WARNING: [Synth 8-567] referenced signal 'h0' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:77]
+WARNING: [Synth 8-567] referenced signal 'led1' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:77]
+INFO: [Synth 8-638] synthesizing module 'showtime' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:238]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:249]
+WARNING: [Synth 8-567] referenced signal 'clock_number' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:246]
+WARNING: [Synth 8-567] referenced signal 'count' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:246]
+WARNING: [Synth 8-567] referenced signal 'led2' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:246]
+INFO: [Synth 8-256] done synthesizing module 'showtime' (3#1) [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:238]
+INFO: [Synth 8-638] synthesizing module 'decoder4_8' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:192]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:198]
+INFO: [Synth 8-256] done synthesizing module 'decoder4_8' (4#1) [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:192]
+WARNING: [Synth 8-567] referenced signal 'y0' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:109]
+WARNING: [Synth 8-567] referenced signal 'y1' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:109]
+WARNING: [Synth 8-567] referenced signal 'y2' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:109]
+WARNING: [Synth 8-567] referenced signal 'y3' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:109]
+WARNING: [Synth 8-567] referenced signal 'y4' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:109]
+WARNING: [Synth 8-567] referenced signal 'y5' should be on the sensitivity list [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:109]
+INFO: [Synth 8-256] done synthesizing module 'digital_clock' (5#1) [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:26]
+WARNING: [Synth 8-3331] design showtime has unconnected port clk_1hz
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 342.781 ; gain = 136.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 342.781 ; gain = 136.219
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 342.781 ; gain = 136.219
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-5546] ROM "clk_1khz" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk_1hz" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clock_number" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "led2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'led2_reg' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:287]
+WARNING: [Synth 8-327] inferring latch for variable 'clock_number_reg' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:248]
+WARNING: [Synth 8-327] inferring latch for variable 'y_reg' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:199]
+WARNING: [Synth 8-327] inferring latch for variable 'select_reg' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'y_reg' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:114]
+WARNING: [Synth 8-327] inferring latch for variable 'led1_reg' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:77]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 374.547 ; gain = 167.984
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 5     
+	   2 Input     17 Bit       Adders := 5     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 9     
+	   4 Input     17 Bit        Muxes := 1     
+	  11 Input      8 Bit        Muxes := 6     
+	   6 Input      8 Bit        Muxes := 1     
+	  18 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	  19 Input      1 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module digital_clock 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 8     
+	   4 Input     17 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module frequency_divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module time_count 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 5     
+Module showtime 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Muxes : 
+	  18 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  19 Input      1 Bit        Muxes := 1     
+Module decoder4_8 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input      8 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 472.398 ; gain = 265.836
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "fred/clk_1khz" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fred/clk_1hz" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 475.863 ; gain = 269.301
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 475.863 ; gain = 269.301
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\d4/y_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\d3/y_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\d2/y_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\d1/y_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\d6/y_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\d5/y_reg[0] )
+INFO: [Synth 8-3886] merging instance 'select_reg[6]' (LD) to 'select_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\select_reg[7] )
+INFO: [Synth 8-3886] merging instance 'select_reg[7]' (LD) to 'y_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\y_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (d1/y_reg[0]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d2/y_reg[0]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d3/y_reg[0]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d4/y_reg[7]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d4/y_reg[6]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d4/y_reg[5]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d4/y_reg[4]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d4/y_reg[3]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d4/y_reg[2]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d4/y_reg[1]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d4/y_reg[0]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d5/y_reg[0]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (d6/y_reg[0]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (select_reg[6]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (y_reg[0]) is unused and will be removed from module digital_clock.
+WARNING: [Synth 8-3332] Sequential element (select_reg[7]) is unused and will be removed from module digital_clock.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 547.863 ; gain = 341.301
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 547.863 ; gain = 341.301
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 547.863 ; gain = 341.301
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 591.516 ; gain = 384.953
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 591.516 ; gain = 384.953
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 591.516 ; gain = 384.953
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 591.516 ; gain = 384.953
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[16] with 1st driver pin 'count_reg[16]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[16] with 2nd driver pin 'count_reg[16]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[8] with 1st driver pin 'count_reg[8]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[8] with 2nd driver pin 'count_reg[8]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[12] with 1st driver pin 'count_reg[12]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[12] with 2nd driver pin 'count_reg[12]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[13] with 1st driver pin 'count_reg[13]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[13] with 2nd driver pin 'count_reg[13]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[9] with 1st driver pin 'count_reg[9]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[9] with 2nd driver pin 'count_reg[9]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[10] with 1st driver pin 'count_reg[10]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[10] with 2nd driver pin 'count_reg[10]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[14] with 1st driver pin 'count_reg[14]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[14] with 2nd driver pin 'count_reg[14]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[6] with 1st driver pin 'count_reg[6]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[6] with 2nd driver pin 'count_reg[6]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[1] with 1st driver pin 'count_reg[1]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[1] with 2nd driver pin 'count_reg[1]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[15] with 1st driver pin 'count_reg[15]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[15] with 2nd driver pin 'count_reg[15]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[11] with 1st driver pin 'count_reg[11]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[11] with 2nd driver pin 'count_reg[11]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[7] with 1st driver pin 'count_reg[7]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[7] with 2nd driver pin 'count_reg[7]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count0[0] with 1st driver pin 'count_reg[0]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count0[0] with 2nd driver pin 'count_reg[0]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[3] with 1st driver pin 'count_reg[3]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[3] with 2nd driver pin 'count_reg[3]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[2] with 1st driver pin 'count_reg[2]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[2] with 2nd driver pin 'count_reg[2]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[5] with 1st driver pin 'count_reg[5]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[5] with 2nd driver pin 'count_reg[5]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[4] with 1st driver pin 'count_reg[4]/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:72]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net count[4] with 2nd driver pin 'count_reg[4]__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:54]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led1_OBUF with 1st driver pin 'led1_reg__0/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:77]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net led1_OBUF with 2nd driver pin 'led1_reg/Q' [D:/win32pe/clock/clock.srcs/sources_1/new/clock.v:82]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       18|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 591.516 ; gain = 384.953
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 591.516 ; gain = 384.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 591.516 ; gain = 384.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 591.516 ; gain = 384.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 591.516 ; gain = 384.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |   381|
+|3     |LUT1   |   235|
+|4     |LUT2   |   429|
+|5     |LUT3   |   515|
+|6     |LUT4   |   407|
+|7     |LUT5   |   332|
+|8     |LUT6   |   429|
+|9     |FDRE   |    67|
+|10    |LD     |    55|
+|11    |IBUF   |     4|
+|12    |OBUF   |    18|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+------------------+------+
+|      |Instance |Module            |Cells |
++------+---------+------------------+------+
+|1     |top      |                  |  2874|
+|2     |  d1     |decoder4_8        |    23|
+|3     |  d2     |decoder4_8_0      |   261|
+|4     |  d3     |decoder4_8_1      |    31|
+|5     |  d5     |decoder4_8_2      |   148|
+|6     |  d6     |decoder4_8_3      |     7|
+|7     |  fred   |frequency_divider |    75|
+|8     |  show   |showtime          |    35|
+|9     |  t      |time_count        |   704|
++------+---------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 591.516 ; gain = 384.953
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 36 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 591.516 ; gain = 364.523
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 591.516 ; gain = 384.953
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 440 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 55 instances were transformed.
+  LD => LDCE: 55 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 35 Warnings, 36 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 591.641 ; gain = 367.336
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 591.641 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 07 17:53:20 2022...

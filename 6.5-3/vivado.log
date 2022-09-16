@@ -1,0 +1,72 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sun Jun 26 17:57:35 2022
+# Process ID: 16232
+# Current directory: D:/win32pe/6.5-3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12184 D:\win32pe\6.5-3\6.5-3.xpr
+# Log file: D:/win32pe/6.5-3/vivado.log
+# Journal file: D:/win32pe/6.5-3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/win32pe/6.5-3/6.5-3.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 863.363 ; gain = 175.008
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 26 17:59:35 2022...
+ simulator installation...
+INFO: [USF-ModelSim-50] Using simulator executables from 'D:/win32pe/vsim.exe'
+INFO: [USF-ModelSim-30] Simulation object is 'sim_1'...
+INFO: [USF-modelsim-7] Finding pre-compiled libraries...
+CRITICAL WARNING: [USF-modelsim-8] Failed to find the pre-compiled simulation library!
+INFO: [USF-modelsim-9]  Recommendation:- Please follow these instructions to resolve this issue:-
+ - set the 'COMPXLIB.MODELSIM_COMPILED_LIBRARY_DIR' project property to the directory where Xilinx simulation libraries are compiled for ModelSim/QuestaSim, or
+ - set the 'MODELSIM' environment variable to point to the modelsim.ini file, or
+ - set the 'WD_MGC' environment variable to point to the directory containing the modelsim.ini file
+INFO: [USF-ModelSim-40] Inspecting design source files for 'FA_tb' in fileset 'sim_1'...
+INFO: [USF-ModelSim-107] Finding global include files...
+INFO: [USF-ModelSim-108] Finding include directories and verilog header directory paths...
+INFO: [USF-ModelSim-109] Fetching design files from 'sim_1'...
+INFO: [USF-ModelSim-2] ModelSim::Compile design
+INFO: [USF-ModelSim-15] Creating automatic 'do' files...
+INFO: [USF-ModelSim-69] Executing 'COMPILE and ANALYZE' step in 'D:/win32pe/6.5-3/6.5-3.sim/sim_1/behav'
+Unable to checkout a license.  Vsim is closing.
+** Fatal: Invalid license environment. Application closing.
+Unable to check out a license. Run the ModelSim Licensing Wizard from the Start->Programs menu to diagnose the problem.
+run_program: Time (s): cpu = 00:00:05 ; elapsed = 00:02:07 . Memory (MB): peak = 884.246 ; gain = 3.824
+INFO: [USF-ModelSim-69] 'compile' step finished in '128' seconds
+ERROR: [USF-ModelSim-70] 'compile' step failed with error(s) while executing 'D:/win32pe/6.5-3/6.5-3.sim/sim_1/behav/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:02:08 . Memory (MB): peak = 884.246 ; gain = 3.824
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation -install_path D:/win32pe
+INFO: [USF-ModelSim-47] Finding simulator installation...
+INFO: [USF-ModelSim-50] Using simulator executables from 'D:/win32pe/vsim.exe'
+INFO: [USF-ModelSim-30] Simulation object is 'sim_1'...
+INFO: [USF-modelsim-7] Finding pre-compiled libraries...
+CRITICAL WARNING: [USF-modelsim-8] Failed to find the pre-compiled simulation library!
+INFO: [USF-modelsim-9]  Recommendation:- Please follow these instructions to resolve this issue:-
+ - set the 'COMPXLIB.MODELSIM_COMPILED_LIBRARY_DIR' project property to the directory where Xilinx simulation libraries are compiled for ModelSim/QuestaSim, or
+ - set the 'MODELSIM' environment variable to point to the modelsim.ini file, or
+ - set the 'WD_MGC' environment variable to point to the directory containing the modelsim.ini file
+INFO: [USF-ModelSim-40] Inspecting design source files for 'FA_tb' in fileset 'sim_1'...
+INFO: [USF-ModelSim-107] Finding global include files...
+INFO: [USF-ModelSim-108] Finding include directories and verilog header directory paths...
+INFO: [USF-ModelSim-109] Fetching design files from 'sim_1'...
+INFO: [USF-ModelSim-2] ModelSim::Compile design
+INFO: [USF-ModelSim-15] Creating automatic 'do' files...
+INFO: [USF-ModelSim-69] Executing 'COMPILE and ANALYZE' step in 'D:/win32pe/6.5-3/6.5-3.sim/sim_1/behav'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:01:32 . Memory (MB): peak = 889.508 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-4703] 'compile' step aborted
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:01:32 . Memory (MB): peak = 889.508 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 26 18:08:47 2022...

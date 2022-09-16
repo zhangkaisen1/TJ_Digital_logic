@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Sun Jun 26 17:57:35 2022
+# Process ID: 16232
+# Current directory: D:/win32pe/6.5-3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12184 D:\win32pe\6.5-3\6.5-3.xpr
+# Log file: D:/win32pe/6.5-3/vivado.log
+# Journal file: D:/win32pe/6.5-3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/win32pe/6.5-3/6.5-3.xpr
+update_compile_order -fileset sources_1
+aunch_simulation -install_path D:/win32pe
+launch_simulation -install_path D:/win32pe

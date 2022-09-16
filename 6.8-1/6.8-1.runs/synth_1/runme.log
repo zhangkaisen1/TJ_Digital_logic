@@ -1,0 +1,322 @@
+
+*** Running vivado
+    with args -log ram_tb.vds -m64 -mode batch -messageDb vivado.pb -notrace -source ram_tb.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source ram_tb.tcl -notrace
+Command: synth_design -top ram_tb -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 25676 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 305.008 ; gain = 97.520
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ram_tb' [D:/win32pe/6.8-1/6.8-1.srcs/sources_1/new/ram_tb.v:23]
+INFO: [Synth 8-638] synthesizing module 'ram' [D:/win32pe/6.8-1/6.8-1.srcs/sources_1/new/ram.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ram' (1#1) [D:/win32pe/6.8-1/6.8-1.srcs/sources_1/new/ram.v:23]
+WARNING: [Synth 8-85] always block has no event control specified [D:/win32pe/6.8-1/6.8-1.srcs/sources_1/new/ram_tb.v:54]
+WARNING: [Synth 8-85] always block has no event control specified [D:/win32pe/6.8-1/6.8-1.srcs/sources_1/new/ram_tb.v:60]
+INFO: [Synth 8-256] done synthesizing module 'ram_tb' (2#1) [D:/win32pe/6.8-1/6.8-1.srcs/sources_1/new/ram_tb.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 342.406 ; gain = 134.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 342.406 ; gain = 134.918
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 342.406 ; gain = 134.918
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 348.531 ; gain = 141.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	             1024 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	             1024 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 468.742 ; gain = 261.254
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 469.789 ; gain = 262.301
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 469.789 ; gain = 262.301
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+--------------+-----------+----------------------+-----------------+
+|Module Name | RTL Object   | Inference | Size (Depth x Width) | Primitives      | 
++------------+--------------+-----------+----------------------+-----------------+
+|ram_tb      | uut/bram_reg | Implied   | 32 x 32              | RAM32X1S x 32   | 
++------------+--------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[31]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[30]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[29]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[28]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[27]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[26]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[25]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[24]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[23]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[22]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[21]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[20]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[19]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[18]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[17]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[16]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[15]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[14]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[13]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[12]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[11]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[10]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[9]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[8]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[7]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[6]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[5]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[4]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[3]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[2]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[1]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/data_retimed_reg[0]) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_0) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_1) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_2) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_3) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_4) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_5) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_6) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_7) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_8) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_9) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_10) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_11) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_12) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_13) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_14) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_15) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_16) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_17) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_18) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_19) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_20) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_21) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_22) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_23) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_24) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_25) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_26) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_27) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_28) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_29) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_30) is unused and will be removed from module ram_tb.
+WARNING: [Synth 8-3332] Sequential element (uut/i_31) is unused and will be removed from module ram_tb.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 469.789 ; gain = 262.301
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 469.789 ; gain = 262.301
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 469.789 ; gain = 262.301
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 470.926 ; gain = 263.438
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 470.926 ; gain = 263.438
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 470.926 ; gain = 263.438
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 470.926 ; gain = 263.438
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 470.926 ; gain = 263.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 470.926 ; gain = 263.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 470.926 ; gain = 263.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 470.926 ; gain = 263.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 470.926 ; gain = 263.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 470.926 ; gain = 263.438
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 66 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 470.926 ; gain = 243.902
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 470.926 ; gain = 263.438
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 66 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 544.238 ; gain = 320.016
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 544.238 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 22 22:34:56 2021...

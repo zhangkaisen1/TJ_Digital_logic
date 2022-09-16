@@ -1,0 +1,20 @@
+# do {encoder83_tb_simulate.do}
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Break key hit
+step
+# Nothing left to do.
+step -over
+# Nothing left to do.
+step -out
+# Nothing left to do.
+step -current
+# ** Note: (vsim-12049) No current active thread!
+# 
+step -over -current
+# ** Note: (vsim-12049) No current active thread!
+# 
+step -out -current
+# ** Note: (vsim-12049) No current active thread!
+# 
